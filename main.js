@@ -148,7 +148,6 @@ function plotAreaChart() {
 		}]
 	});
 }
-
 function getMentalHealth(data) {
 	const fieldMap = getColumnMap("prior_signs_mental_health_issues", data)
 	let unknown = fieldMap.get("unknown");
@@ -159,7 +158,6 @@ function getMentalHealth(data) {
 	return [parseFloat(unknown / total), parseFloat(yes / total),
 	parseFloat(no / total)];
 }
-
 function getAge(data) {
 	const fieldMap = getColumnMap("age_of_shooter", data)
 	let range13to25 = 0;
@@ -195,7 +193,6 @@ function getAge(data) {
 	parseFloat(range40to49 / total),
 	parseFloat(range50plus / total)];
 }
-
 function getWeaponLegality(data) {
 	const columnMap = getColumnMap("weapons_obtained_legally", data);
 	const yes = columnMap.get("yes")
@@ -204,7 +201,6 @@ function getWeaponLegality(data) {
 	const total = yes + no + unknown
 	return [parseFloat(yes / total), parseFloat(no / total), parseFloat(unknown / total)]
 }
-
 function getGender(data) {
 	const columnMap = getColumnMap("gender", data);
 	const male = columnMap.get("male");
@@ -213,7 +209,6 @@ function getGender(data) {
 	const total = male + female + maleAndFemale + maleAndFemale;
 	return [parseFloat((male + maleAndFemale) / total), parseFloat((female + maleAndFemale) / total)];
 }
-
 function getInjuredAndFatalitiesByWeaponType(legalType, data) {
 	const rows = getJoinedColumns("injured", "fatalities", "weapon_type", "weapons_obtained_legally", data);
 	let weapons = {
@@ -246,7 +241,6 @@ function getInjuredAndFatalitiesByWeaponType(legalType, data) {
 	return [[weapons['handgun']['injured'], weapons['rifle']['injured'], weapons['shotgun']['injured']],
 	[weapons['handgun']['fatalities'], weapons['rifle']['fatalities'], weapons['shotgun']['fatalities']]];
 }
-
 function incrementInjuredAndFatalities(weaponName, weapons, rowMap) {
 	const oldInjured = parseInt(weapons[weaponName]["injured"])
 	const oldFatalities = parseInt(weapons[weaponName]["fatalities"])
@@ -254,7 +248,6 @@ function incrementInjuredAndFatalities(weaponName, weapons, rowMap) {
 	weapons[weaponName]["fatalities"] = parseInt(rowMap.get("fatalities")) + oldFatalities
 	return weapons
 }
-
 function getColumnMap(column, data) {
 	const columnMap = new Map;
 	data.map(row => {
@@ -267,7 +260,6 @@ function getColumnMap(column, data) {
 	})
 	return columnMap;
 }
-
 function getJoinedColumns(column1, column2, data) {
 	const columns = [];
 	data.map(row => {
@@ -281,7 +273,6 @@ function getJoinedColumns(column1, column2, data) {
 	})
 	return columns;
 }
-
 function getJoinedColumns(column1, column2, column3, column4, data) {
 	const columns = [];
 	data.map(row => {
@@ -299,7 +290,6 @@ function getJoinedColumns(column1, column2, column3, column4, data) {
 	})
 	return columns;
 }
-
 function plotPie(buttonCol) {
 	var myChart = Highcharts.chart('pieChart', {
 		chart: {
@@ -431,7 +421,6 @@ function plotBar(injuriesByWeapon, fatalitiesByWeapon) {
 		}]
 	});
 }
-
 var stateNames = {
 	"AL": "Alabama",
 	"AK": "Alaska",
@@ -709,7 +698,9 @@ function setResults() {
 			"font-size": 24,
 			"text-align": "left",
 			"x": 10,
-			"y": 10
+			"y": 10,
+			'font-family': 'sans-serif',
+			'font-weight': 'normal'
 		},
 		"subtitle": {
 			"text": "data from Mother Jones*",
@@ -717,7 +708,9 @@ function setResults() {
 			"color": "#333",
 			"text-align": "left",
 			"x": 10,
-			"y": 40
+			"y": 40,
+			'font-family': 'sans-serif',
+			'font-weight': 'normal'
 		},
 		"legend": {
 			"toggle-action": "none",
@@ -814,7 +807,6 @@ function setResults() {
 		]
 	}
 }
-
 // renders chart
 zingchart.loadModules('maps, maps-usa', function (e) {
 	zingchart.render({
