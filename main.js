@@ -724,7 +724,8 @@ function setResults() {
 				"height": 10,
 			},
 			"item": {
-				"font-size": 16
+				"font-size": 16,
+				'font-family': 'sans-serif'
 			}
 		},
 		"series": [ // render legend items
