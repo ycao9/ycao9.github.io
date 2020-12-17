@@ -31,9 +31,7 @@ function plotPieChart() {
 		genderButt.disabled = true;
 		weaponLegalButt.disabled = true;
 		let ageData = getAge(data)
-		filteredData = [{ name: "13-25", y: ageData[0], sliced: true, selected: true },
-		{ name: "26-30", y: ageData[1] }, { name: "31-39", y: ageData[2] }, { name: "41-49", y: ageData[3] },
-		{ name: "50+", y: ageData[4] }]
+		filteredData = [{ name: "26-30", y: ageData[1] }, { name: "31-39", y: ageData[2] },	{name: "13-25", y: ageData[0], sliced: true, selected: true }, { name: "41-49", y: ageData[3] }, { name: "50+", y: ageData[4] }]
 		plotPie(filteredData)
 	}
 	else if (genderButt.checked == true) {
