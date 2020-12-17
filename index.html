@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="zc-html">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Project</title>
+	<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Paytone+One&display=swap" rel="stylesheet" />
+	<link href="./style.css" rel="stylesheet"/>
+	<script src="./main.js"></script>
+
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+	<script src="./data.json"></script>
+</head>
+
+<body class="zc-body">
+	<!-- <div class='chart-parent--container'>
+		<div id="barChart"></div>
+		<input type= "checkbox" id= "legalityCheck" onclick="plotBarChart()">Legal Weapons</input>	
+		<input type= "checkbox" id= "unknownCheck" onclick="plotBarChart()">Unknown</input>	
+
+		<div id="container"></div>
+	</div> -->
+	<div class="chart-parent--container">
+		<div class="chart-container">
+			<div id="barChart"></div>
+			<input type= "checkbox" id= "legalityCheck" onclick="plotBarChart()">Legal Weapons</input>	
+			<input type= "checkbox" id= "unknownCheck" onclick="plotBarChart()">Unknown</input>	
+		</div>
+		<div class="chart-container">
+			<div id="container"></div>
+		</div>
+	</div>
+		
+	<!-- <div class="chart-parent--container">
+		<div class="chart-container">
+			<div id="pieChart"></div>
+			<input type= "checkbox" id= "genderCheck" onclick="plotPieChart()">Gender</input>		
+			<input type= "checkbox" id= "ageCheck" onclick="plotPieChart()">Age</input>
+			<input type= "checkbox" id= "mentalCheck" checked onclick="plotPieChart()">Mental Health</input>
+			<input type = "checkbox" id = "legalWeaponCheck" onclick="plotPieChart()">Weapon Legality</input>
+		</div>
+		<div class="chart-container">
+			<div id="myChart"></div>
+		</div>
+	</div> -->
+		
+
+
+		<div id="pieChart"></div>
+		<input type= "checkbox" id= "genderCheck" onclick="plotPieChart()">Gender</input>		
+		<input type= "checkbox" id= "ageCheck" onclick="plotPieChart()">Age</input>
+		<input type= "checkbox" id= "mentalCheck" checked onclick="plotPieChart()">Mental Health</input>
+		<input type = "checkbox" id = "legalWeaponCheck" onclick="plotPieChart()">Weapon Legality</input>
+
+	<div id="myChart"></div>
+	
+</body>
+</html>
