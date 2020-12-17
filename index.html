@@ -21,22 +21,23 @@
 
 <body class="zc-body">
 	<div class="chart-parent--container">
-		<div class="chart-container" style="width:50%; display:inline-block;">
+		<div class="chart-container" >
 			<div id="barChart"></div>
 			<input type= "checkbox" id= "legalityCheck" onclick="plotBarChart()"><label for=myCheckbox>Legal Weapons</label>
 			<input type= "checkbox" id= "unknownCheck" onclick="plotBarChart()"><label for=myCheckbox>Unknown</label>	
 		</div>
-		<div class="chart-container" style="width:50%; display:inline-block;">
+		<hr>
+		<div class="chart-container" >
 			<div id="container"></div>
 		</div>
 	</div>
-		
+	<hr>	
 	<div id="pieChart"></div>
 	<input type= "checkbox" id= "genderCheck" onclick="plotPieChart()"><label for=myCheckbox>Gender</label>		
 	<input type= "checkbox" id= "ageCheck" onclick="plotPieChart()"><label for=myCheckbox>Age</label>
 	<input type= "checkbox" id= "mentalCheck" checked onclick="plotPieChart()"><label for=myCheckbox>Mental Health</label>
 	<input type = "checkbox" id = "legalWeaponCheck" onclick="plotPieChart()"><label for=myCheckbox>Weapon Legality</label>
-
+	<hr>
 	<div id="myChart"></div>
 	
 </body>

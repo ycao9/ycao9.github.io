@@ -2,9 +2,9 @@
     font-family: 'Montserrat', sans-serif;
 } */
 
-.chart-parent--container {
+/* .chart-parent--container {
     display: flex;
-}
+} */
 
 #myChart {
     height: 100%;
@@ -12,7 +12,7 @@
     min-height: 400px;
 } 
 
-.chart-container {
+#barChart,#container {
     height: 100%;
     width: 100%;
     min-height: 400px;
@@ -22,6 +22,18 @@
     padding-left: 30px;
 }
 
+#pieChart,#myChart {
+    height: 100%;
+    width: 100%;
+    min-height: 400px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+}
+
 input[type="checkbox"] + label {
     font-family: sans-serif
 }
+
+

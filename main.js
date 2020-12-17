@@ -314,8 +314,8 @@ function plotPie(buttonCol) {
 			enabled: true,
 			reversed: true,
 			verticalAlign: 'top',
-			x: 220,
-			y: 40,
+			x: 348,
+			y: 53,
 			floating: true,
 			backgroundColor: 'white',
 			borderColor: 'grey',
@@ -326,8 +326,6 @@ function plotPie(buttonCol) {
 				allowPointSelect: true,
 				showInLegend: true,
 				cursor: 'pointer',
-				// colors: ['red', 'blue'],
-
 				dataLabels: {
 					enabled: true,
 					format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
@@ -335,7 +333,7 @@ function plotPie(buttonCol) {
 			}
 		},
 		series: [{
-			name: 'Sales',
+			name: 'Percent',
 			colorByPoint: true,
 			data: buttonCol,
 		}]
@@ -351,6 +349,7 @@ function plotBar(injuriesByWeapon, fatalitiesByWeapon) {
 			style: {
 				color: 'black',
 				fontSize: "19px",
+				fontWeight: 9
 			}
 		},
 		tooltip: {
@@ -360,10 +359,11 @@ function plotBar(injuriesByWeapon, fatalitiesByWeapon) {
 		xAxis: {
 			categories: ["Handgun", "Rifle", "Shotgun"],
 			title: {
-				text: 'Order ID',
+				text: 'Weapon types',
 				style: {
-					color: 'grey',
-					fontSize: "14px"
+					color: 'black',
+					fontSize: "14px",
+					fontWeight: 8,
 				}
 			},
 			labels: {
@@ -375,10 +375,11 @@ function plotBar(injuriesByWeapon, fatalitiesByWeapon) {
 		yAxis: {
 			min: 0,
 			title: {
-				text: 'Amount of Knives & Forks Ordered',
+				text: 'Number of victims',
 				style: {
-					color: 'grey',
-					fontSize: "14px"
+					color: 'black',
+					fontSize: "14px",
+					fontWeight: 8,
 				}
 			},
 			stackLabels: {
@@ -394,7 +395,7 @@ function plotBar(injuriesByWeapon, fatalitiesByWeapon) {
 			align: 'right',
 			verticalAlign: 'top',
 			x: 1,
-			y: 40,
+			y: 35,
 			floating: true,
 			backgroundColor: 'white',
 			borderColor: 'grey',
@@ -792,11 +793,18 @@ function setResults() {
 					"id": "map",
 					"name": "usa",
 					"scale": true,
+					"zooming": false,
+					'panning': false,
+					'scrolling': false,
 					"style": {
 						"hover-state": {
 							"background-color": "#FFF",
 							"alpha": 0.3,
 							"border-width": 3
+						},
+						'controls': {
+							'placement': 'tr', //tl (default), tr, bl, br
+							'visible': false,
 						},
 						"border-color": "#FFF",
 						"items": stateResults
